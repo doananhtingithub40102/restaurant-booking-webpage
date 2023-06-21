@@ -1,0 +1,45 @@
+@use "color";
+@use "mixin";
+@use "font";
+@use "variables";
+
+.form-group {
+    margin-bottom: 1rem;
+
+    label {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        color: color.$mainTextColor;
+    }
+
+    .checkLabel {
+        color: map-get($map: color.$levels_black, $key: 1);
+    }
+
+    .form-control {
+        @include mixin.setBorder($color: #ced4da);
+
+        display: block;
+        width: 100%;
+        height: calc(1.5em + 0.75rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: font.$fontSize - 0.08;
+        font-weight: font.$fontWeight;
+        line-height: variables.$lineHeight;
+        color: map-get($map: color.$levels_black, $key: 3);
+        background-color: color.$bgWhite;
+        background-clip: padding-box;
+        border-radius: variables.$border_radius;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+
+    .checkbox {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 442px) {
+    .form-group .checkbox {
+        display: block;
+    }
+}

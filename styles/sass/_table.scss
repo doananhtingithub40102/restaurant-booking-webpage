@@ -1,0 +1,59 @@
+@use "variables";
+@use "mixin";
+@use "color";
+
+.table-responsive {
+    max-height: variables.$thresholdHeight - variables.$maxHeight_heading-sm;
+    overflow: auto;
+}
+
+.table {
+    @include mixin.setBorder($color: #dee2e6);
+
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: map-get($map: color.$levels_black, $key: 1);
+
+    th,
+    td {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-bottom: 2px solid color.$bgGray;
+    }
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, .05);
+}
+
+.table-bordered {
+
+    th,
+    td {
+        @include mixin.setBorder($color: #dee2e6);
+    }
+}
+
+.table-hover tbody tr:hover {
+    color: map-get($map: color.$levels_black, $key: 0);
+    background-color: rgba(0, 0, 0, .075);
+}
+
+@media screen and (max-width: 1271px) {
+    .table-responsive {
+        max-height: 495px - variables.$maxHeight_heading-sm;
+    }
+}
+
+@media screen and (max-width: 775px) {
+    .table-responsive {
+        max-height: 603px - variables.$maxHeight_heading-sm;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .table-responsive {
+        max-height: 445px - variables.$maxHeight_heading-sm;
+    }
+}

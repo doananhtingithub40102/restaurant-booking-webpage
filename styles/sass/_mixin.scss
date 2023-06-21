@@ -1,0 +1,38 @@
+@use "color";
+
+@mixin userSelect($type) {
+    -webkit-user-select: $type;
+    -khtml-user-select: $type;
+    -moz-user-select: $type;
+    -ms-user-select: $type;
+    -o-user-select: $type;
+    user-select: $type;
+}
+
+@mixin padding_x($padWidth) {
+    padding-left: $padWidth;
+    padding-right: $padWidth;
+}
+
+@mixin padding_y($padWidth) {
+    padding-top: $padWidth;
+    padding-bottom: $padWidth;
+}
+
+@mixin box_shadow($color: black) {
+    box-shadow: 0 2px 5px 0 rgba($color, 0.16), 0 2px 10px 0 rgba($color, 0.12);
+}
+
+@mixin setBorder($width: 1px, $style: solid, $color: map-get($map: color.$levels_black, $key: 0)) {
+    border: $width $style $color;
+}
+
+@mixin setOpacity($percent: 60%) {
+    opacity: $percent;
+}
+
+@mixin flexed_column($grow, $shrink, $basis) {
+    -ms-flex: $grow $shrink $basis;
+    flex: $grow $shrink $basis;
+    max-width: $basis;
+}

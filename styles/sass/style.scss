@@ -1,0 +1,160 @@
+@use "mixin";
+@use "font";
+@use "variables";
+@use "color";
+@use "globalSelectors";
+@use "placeholders";
+@use "padding";
+@use "navbar";
+@use "button";
+@use "table";
+@use "modal";
+@use "form";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include mixin.userSelect(none);
+
+    margin: 0;
+
+    font: {
+        family: font.$fontFamilly;
+        size: font.$fontSize;
+        weight: font.$fontWeight;
+    }
+
+    line-height: variables.$lineHeight;
+    color: map-get($map: color.$levels_black, $key: 1);
+    text-align: left;
+    background-color: color.$bgWhite;
+}
+
+.container-fluid {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    .row {
+        @extend %flex; // a placeholder class
+
+        margin-top: 10px;
+
+        .col-sm-3,
+        .col-sm-9,
+        .col-md-3,
+        .col-md-9 {
+            position: relative;
+            width: 100%;
+        }
+    }
+
+    header {
+        @include mixin.setBorder($color: color.$primaryColor);
+    }
+
+    main {
+        #home {
+            position: relative;
+            letter-spacing: 4px;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                vertical-align: middle;
+            }
+
+            .display-left {
+                position: absolute;
+                top: 50%;
+                left: 0%;
+                transform: translate(0%, -50%);
+
+                h1,
+                h6 {
+                    margin: 10px 0;
+                    color: color.$mainBgColor;
+                }
+
+                button {
+                    @include mixin.setOpacity;
+
+                    padding: 12px 24px;
+                    border-radius: 0;
+                    font-size: 18px;
+
+                    &:hover {
+                        @include mixin.setOpacity(1);
+                    }
+                }
+
+            }
+        }
+
+        #home,
+        #menu {
+            font-family: font.$fontFamilly2;
+        }
+
+        #booking {
+            .heading {
+                @extend %heading;
+            }
+
+            aside {
+                background-color: color.$mainBgColor;
+                padding: 10px;
+                min-height: variables.$thresholdHeight;
+
+                section {
+                    padding: 5px;
+                }
+
+                ol {
+                    padding-left: 20px;
+                }
+            }
+
+            .heading-sm {
+                @extend %heading;
+
+                max-height: variables.$maxHeight_heading-sm;
+                font-size: 1.2rem;
+                padding: 0 15px;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:576px) {
+    .col-sm-3 {
+        @include mixin.flexed_column(0, 0, 25%);
+    }
+
+    .col-sm-9 {
+        @include mixin.flexed_column(0, 0, 75%);
+    }
+}
+
+@media screen and (min-width:769px) {
+    .col-md-3 {
+        @include mixin.flexed_column(0, 0, 25%);
+    }
+
+    .col-md-9 {
+        @include mixin.flexed_column(0, 0, 75%);
+    }
+}
+
+@media screen and (max-width:769px) {
+    #booking {
+        flex-direction: column-reverse;
+    }
+
+    .hide-md {
+        display: none;
+    }
+}

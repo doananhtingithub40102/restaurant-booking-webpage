@@ -1,0 +1,111 @@
+@use "mixin";
+@use "color";
+@use "variables";
+@use "placeholders";
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+
+    .modal-dialog {
+        max-width: 500px;
+        margin: 1.75rem auto;
+
+        .modal-content {
+            @include mixin.setBorder($color: rgba(0, 0, 0, .2));
+
+            position: relative;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            width: 100%;
+            pointer-events: auto;
+            background-color: color.$bgWhite;
+            background-clip: padding-box;
+            border-radius: variables.$border_radius + 0.05rem;
+            outline: 0;
+
+            .modal-header {
+                background-color: color.$mainBgColor;
+                border-bottom: 2px solid #dee2e6;
+                border-top-left-radius: calc(0.3rem - 1px);
+                border-top-right-radius: calc(0.3rem - 1px);
+
+                .close {
+                    float: right;
+                    color: color.$mainTextColor;
+                    font-size: 32px;
+                    line-height: 30px;
+                    font-weight: bold;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                h2 {
+                    font-weight: 500;
+                    line-height: 1.2;
+                    margin: 1px;
+                    color: color.$mainTextColor;
+                }
+            }
+
+            .modal-body {
+                position: relative;
+                -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+
+                .btnLuu {
+                    @extend %btn;
+
+                    background-color: color.$mainBgColor;
+                    color: color.$mainTextColor;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .modal-footer {
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                -ms-flex-align: center;
+                align-items: center;
+                -ms-flex-pack: end;
+                justify-content: flex-end;
+                padding: 0.75rem;
+                border-top: 1px solid #dee2e6;
+                border-bottom-right-radius: calc(0.3rem - 1px);
+                border-bottom-left-radius: calc(0.3rem - 1px);
+
+                span {
+                    color: color.$mainTextColor;
+                }
+            }
+        }
+    }
+}
+
+.modal-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.5;
+}

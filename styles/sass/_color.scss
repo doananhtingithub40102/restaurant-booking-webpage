@@ -1,0 +1,38 @@
+// Color for text
+$levels_black: (
+    0: #000,
+    1: #212529,
+    2: #343a40,
+    3: #696969,
+    4: #757474
+);
+$primaryColor: #007bff;
+$dangerColor: #dc3545;
+$mainTextColor: brown;
+
+// Color for background
+$bgWhite: #fff;
+$bgLight: #f8f9fa;
+$bgGray: #e9ecef;
+$mainBgColor: #defbba;
+
+// Selectors for styling text color
+.text-primary {
+    color: $primaryColor;
+}
+
+.text-danger {
+    color: $dangerColor;
+}
+
+.text-white {
+    color: $bgWhite;
+}
+
+.text-dark {
+    color: map-get($map: $levels_black, $key: 2);
+}
+
+.bg-light {
+    background-color: $bgLight;
+}

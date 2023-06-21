@@ -1,0 +1,17 @@
+@use "placeholders";
+@use "color";
+
+.btn-light {
+    @extend %btn; // a placeholder class
+
+    color: color.$mainTextColor;
+    background-color: color.$bgLight;
+    border-color: color.$bgLight;
+    border-bottom: 1px solid map-get($map: color.$levels_black, $key: 4);
+    text-align: left;
+    
+    &:hover {
+        background-color: color.$bgGray;
+        color: map-get($map: color.$levels_black, $key: 1);
+    }
+}

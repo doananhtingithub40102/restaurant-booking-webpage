@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/css/style.css">
+    <script type="module" src="../js/main.js"></script>
+    <title>FoodCircles</title>
+</head>
+
+<body>
+    <div class="container-fluid border-primary">
+        <header>
+            <div class="row">
+                <div class="col-sm-3 text-center pt-4"><img src="../img/logo.png" height="150" alt="">
+                </div>
+                <div class="col-sm-9"><img src="../img/banner.png" alt="" width="100%" height="200"></div>
+            </div>
+        </header>
+        <nav>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link text-primary" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-primary" href="#menu">Menu</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-primary dropdown-toggle" href="#booking" id="dropdown">Booking a table</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" id="openForm">Booking Form</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div id="home">
+                <img src="../img/chef.jpg" alt="Restaurant" width="1600" height="1060">
+                <div class="display-left p-large">
+                    <h1>FoodCircles</h1>
+                    <h1 class="fs-3 hide-md"><b>RESTAURANT</b></h1>
+                    <h6><button class="btn-light" id="book">BOOK</button></h6>
+                </div>
+            </div>
+            <div class="row" id="menu">
+                <div class="col-md-3">
+                    <div class="p-3">
+                        <h1 class="text-center">Our Menu</h1>
+                        <h4>Bread Basket</h4>
+                        <p class="text-dark">Assortment of fresh baked fruit breads and muffins 5.50</p>
+                        <h4>Honey Almond Granola with Fruits</h4>
+                        <p class="text-dark">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
+                        <h4>Belgian Waffle</h4>
+                        <p class="text-dark">Vanilla flavored batter with malted flour 7.50</p>
+                        <h4>Scrambled eggs</h4>
+                        <p class="text-dark">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
+                        <h4>Blueberry Pancakes</h4>
+                        <p class="text-dark">With syrup, butter and lots of berries 8.50</p>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="row pt-4">
+                        <div class="col-sm-3 p-2">
+                            <img src="../img/sandwich.jpg" class="w-100" alt="Sandwich">
+                            <h3>The Perfect Sandwich, A Real NYC Classic</h3>
+                            <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                        </div>
+                        <div class="col-sm-3 p-2">
+                            <img src="../img/steak.jpg" class="w-100" alt="Steak">
+                            <h3>Let Me Tell You About This Steak</h3>
+                            <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt
+                                ipsum lipsum.</p>
+                        </div>
+                        <div class="col-sm-3 p-2">
+                            <img src="../img/wine.jpg" class="w-100" alt="Pasta and Wine">
+                            <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
+                            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                        </div>
+                        <div class="col-sm-3 p-2">
+                            <img src="../img/salmon.jpg" class="w-100" alt="Salmon">
+                            <h3>Salmon For Your Skin</h3>
+                            <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt
+                                ipsum lipsum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="booking">
+                <div class="col-md-3">
+                    <aside>
+                        <section>
+                            <div class="heading">Booking</div>
+                            <button type="button" class="btn-light text-left w-100">Family</button>
+                            <button type="button" class="btn-light text-left w-100">Birthday Party</button>
+                            <button type="button" class="btn-light text-left w-100">Office Party</button>
+                        </section>
+                        <section>
+                            <div class="heading">Contact</div>
+                            <div class="text-primary">Call us <span class="text-dark bg-light">1900 6005</span> - To
+                                booking and get a consultation</div>
+                            <div class="text-primary">Address: No.13, Tran Binh Trong Street - District 1 - Ho Chi Minh
+                                City</div>
+                        </section>
+                        <section>
+                            <div class="heading">Interesting Articles</div>
+                            <ol>
+                                <li><a class="text-primary" href="#">Experience of organizing a baby's birthday</a></li>
+                                <li><a class="text-primary" href="#">Special food of all regions in Vietnam</a></li>
+                                <li><a class="text-primary" href="#">The culture of Saigon food</a></li>
+                            </ol>
+                        </section>
+                    </aside>
+                </div>
+                <div class="col-md-9">
+                    <div class="heading-sm">Reservation list:</div>
+                    <div class="table-responsive">
+                        <table id="myTable" class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Guest name</th>
+                                    <th>Phone</th>
+                                    <th>Event date</th>
+                                    <th>Event hour</th>
+                                    <th>Number of Attendees</th>
+                                    <th>Type</th>
+                                    <th>Party Room</th>
+                                    <th>Member</th>
+                                    <th>Services</th>
+                                    <th>Note</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Dao Ngoc Nhi</td>
+                                    <td>0541568795</td>
+                                    <td>2022-02-18</td>
+                                    <td>21:00</td>
+                                    <td>9</td>
+                                    <td>Set Menu</td>
+                                    <td>Vip</td>
+                                    <td></td>
+                                    <td>Dedicated server, Fresh Flowers</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Nguyen Minh An</td>
+                                    <td>0345151203</td>
+                                    <td>2022-02-24</td>
+                                    <td>16:00</td>
+                                    <td>5</td>
+                                    <td>Buffet</td>
+                                    <td>Normal</td>
+                                    <td>Member</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Tran Trong Nghia</td>
+                                    <td>0954126598</td>
+                                    <td>2022-03-09</td>
+                                    <td>19:00</td>
+                                    <td>3</td>
+                                    <td>Finger Food</td>
+                                    <td>Vip</td>
+                                    <td></td>
+                                    <td>Fresh Flowers</td>
+                                    <td>Handwashing request</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header p-3">
+                    <span class="close">&times;</span>
+                    <h2>Reservation Info</h2>
+                </div>
+                <div class="modal-body p-3">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="txtHoten">Guest name:</label>
+                            <span class="text-danger" id="errorHoten">*</span>
+                            <div>
+                                <input type="text" class="form-control" id="txtHoten" placeholder="Full name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtDT">Phone:</label>
+                            <span class="text-danger" id="errorDT">*</span>
+                            <div>
+                                <input type="text" class="form-control" id="txtDT" placeholder="Contact number"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtNgayNhanTiec">Event date:</label>
+                            <span class="text-danger" id="errorNgayNhanTiec">*</span>
+                            <div>
+                                <input type="date" class="form-control" id="txtNgayNhanTiec" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtGioNhanTiec">Hour date:</label>
+                            <span class="text-danger" id="errorGioNhanTiec">*</span>
+                            <div>
+                                <input type="time" class="form-control" id="txtGioNhanTiec" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtSoNguoi">Number of Attendees:</label>
+                            <span class="text-danger" id="errorSoNguoi">*</span>
+                            <div>
+                                <input type="text" class="form-control" id="txtSoNguoi" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtLoaiTiec">Type:</label>
+                            <span class="text-danger" id="errorLoaiTiec">*</span>
+                            <div>
+                                <select name="" class="form-control" id="txtLoaiTiec">
+                                    <option value="setmenu">Set Menu</option>
+                                    <option value="buffet">Buffet</option>
+                                    <option value="fingerFood">Finger Food</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Party Room:</label>
+                            <span class="text-danger">*</span>
+                            <input type="radio" name="loaiPhong" id="vip" checked>
+                            <label for="vip" class="checkLabel">Vip</label>
+                            <input type="radio" name="loaiPhong" id="thuong">
+                            <label for="thuong" class="checkLabel">Normal</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Additional Services:</label>
+                            <div class="checkbox">
+                                <input type="checkbox" id="phucvuRieng">
+                                <label for="phucvuRieng" class="checkLabel">Dedicated server</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="hoatuoi">
+                                <label for="hoatuoi" class="checkLabel">Fresh Flowers</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="thanhvien">Member:</label>
+                            <div class="checkbox">
+                                <input type="checkbox" id="thanhvien">
+                                <span class="text-primary font-italic">If you are a member of us</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="ghichu">Note:</label>
+                            <textarea name="" class="form-control" rows="5" id="ghichu"
+                                placeholder="Spacious and airy space"></textarea>
+                        </div>
+                        <div>
+                            <button type="button" class="w-100 btnLuu" id="btnLuu">Save and booking</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <span>Hotline: 1900 6005</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop"></div>
+</body>
+
+</html>
