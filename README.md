@@ -27,4 +27,4 @@ During the development of this project, I gained the following knowledge and ski
 
 ## Demo
 
-You can access the live demo of the Restaurant Booking Webpage by clicking <a href="https://doananhtingithub40102.github.io/restaurant-booking-webpage/" target="_blank">here</a>
+You can access the live demo of the Restaurant Booking Webpage by clicking <a href="https://doananhtingithub40102.github.io/restaurant-booking-webpage/html/" target="_blank">here</a>
